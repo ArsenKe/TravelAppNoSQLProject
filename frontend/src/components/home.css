@@ -1,0 +1,102 @@
+.navbars {
+  background-color: rgb(14, 14, 102);
+  height: 70px;
+  padding: 4px;
+  padding-left: 30px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.bodyofhome{
+background-image: url("../activities.png");
+height:620px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: auto;
+padding-top:60px ;
+
+}
+.innerbodyofhome{
+background-color: rgba(0, 0, 0, 0.842);
+width: 50%;
+color: rgb(255, 255, 255);
+align-items: center;
+padding: 5%;
+align-self: center;
+position: inherit;
+margin: auto;
+text-align: center;
+}
+
+.title{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.assignement{
+padding-top: 70px;
+padding-bottom: 70px;
+}
+
+.innerAssignment{
+  background-color: rgba(0, 0, 0, 0.842);
+width: 80%;
+color: rgb(255, 255, 255);
+align-items: center;
+padding: 5%;
+align-self: center;
+position: inherit;
+margin: auto;
+text-align: center;
+}
+
+.footer {
+  background-color: rgb(47, 48, 48);
+  height: 60px;
+  padding: 4px;
+  padding-left: 30px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: row;
+}
+
+.logoname {
+  font-size: 40px;
+}
+
+.logonameappend {
+  font-size: 30px;
+}
+
+.subnav1 {
+  max-width: 500px;
+}
+.subnav2 {
+  position: absolute;
+  right: 50px;
+  margin-top: 15px;
+}
+
+#btns {
+    margin-top: -40;
+  margin-left: 10px;
+}
+
+.body {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px;
+}
+
+.row {
+  margin-bottom: 50px;
+}
+
+.card{
+  color: black;
+}

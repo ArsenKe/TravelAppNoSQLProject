@@ -1,0 +1,71 @@
+##version: '2'
+##
+##services:
+##  app:
+##    image: 'docker-spring-boot-postgres:latest'
+##    build:
+##      context: .
+##    container_name: app
+##    depends_on:
+##      - db
+##    environment:
+##      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/travel_app_db
+##      - SPRING_DATASOURCE_USERNAME=postgres
+##      - SPRING_DATASOURCE_PASSWORD=nE5kMc7JCGNqwDQM
+##      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+##
+##  db:
+##    image: 'postgres:13.1-alpine'
+##    container_name: db
+##    environment:
+##      - POSTGRES_USER=compose-postgres
+##      - POSTGRES_PASSWORD=compose-nE5kMc7JCGNqwDQM
+#
+#version: "3.7"
+#services:
+#  backend_service:
+#    build: .
+#    restart: always
+#    ports:
+#      - 8081:8081
+#    depends_on:
+#      - postgres_db
+#    links:
+#      - postgres_db:database
+#  postgres_db:
+#    image: "postgres:10.21"
+#    restart: always
+#    ports:
+#      - 5432:5432
+#    environment:
+#      POSTGRES_DB: travel_app_db
+#      POSTGRES_PASSWORD: nE5kMc7JCGNqwDQM
+
+
+version: '3.1'
+services:
+  app:
+    container_name: backend.jar
+    image: backend.jar
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresqldb
+      - mongodb
+  postgresqldb:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=travel_app_db
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=travel_app_db
